@@ -1,0 +1,17 @@
+---
+profile: production
+
+exclude_paths:
+  - .cache/
+  - .github/
+  - excludethis/
+  - .ansible-lint.yml
+  - "**/.terraform/**"
+  - "**/terraform/**"
+  - ansible/files/
+  - ansible/templates/
+  - "**/python-tools/**"
+  - copier.yml
+
+skip_list:
+  - no-changed-when

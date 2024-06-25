@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title></title>
+</head>
+<body>
+	<p>Hello there,</p>
+	Click <a href="{{ url }}">here</a> to register on directus.
+	{% assign token = url | split: "?token=" | last %}
+</body>
+</html>

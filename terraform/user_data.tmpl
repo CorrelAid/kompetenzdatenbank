@@ -1,0 +1,64 @@
+#cloud-config
+
+# Set the locale and timezone
+locale: en_US.UTF-8
+timezone: Europe/Berlin
+
+# Update and upgrade packages
+package_update: true
+package_upgrade: true
+package_reboot_if_required: false
+
+# Manage the /etc/hosts file
+manage_etc_hosts: true
+
+# Install required packages
+packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - gnupg-agent
+  - software-properties-common
+  - fail2ban
+  - unattended-upgrades
+  - python3-pip
+  - libpq-dev
+
+runcmd:
+  # Add Docker GPG key and repository
+  - echo "Creating /etc/apt/keyrings directory" && logger "Keyrings directory created"
+  - install -m 0755 -d /etc/apt/keyrings
+  - echo "Adding Docker GPG key" && logger "Docker GPG key added"
+  - curl -fsSL --insecure https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+  - chmod a+r /etc/apt/keyrings/docker.gpg
+  - echo "Adding Docker repository" && logger "Docker repository added"
+  - echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+  # Update package lists and install Docker packages
+  - echo "Updating package lists" && logger "Package lists updated"
+  - apt-get update && logger "Package update completed"
+  - echo "Installing Docker packages" && logger "Docker packages installation started"
+  - apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin && logger "Docker packages installed"
+
+  # Configure fail2ban and SSH server
+  - echo "Configuring fail2ban" && logger "Fail2ban configured"
+  - printf "[sshd]\nenabled = true\nbanaction = iptables-multiport" > /etc/fail2ban/jail.local
+  - systemctl enable fail2ban
+
+  # Restart and enable Docker service
+  - echo "Restarting Docker service" && logger "Docker service restarted"
+  - systemctl restart docker
+  - systemctl enable docker
+
+# Configure users
+users:
+  - default
+  - name: ${user}
+    groups: sudo,docker
+    sudo: "ALL=(ALL) NOPASSWD:ALL"
+    lock_passwd: true
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCVoXdqUDqBIFFPRWS9ApA1zxzP9/PTiPh95/wxBTc4MxOrXKwA///OS80CCh+IrAtdwOiwHPEquSYjx0r5IiRZMMrL1vw2Q7iyp3ADRB5wqh3aRX1sp3qmEiCGcGIZ5sHJ5fPG37HlQ98Y61ugvxo8Cxelng7DrC0MgfXSO0lURICcgRHrM+mmfBV9sDb/CMBGyGByT1KMbP7OeQ/kiz6QvyoUlVvYfdm//m1qUvMzBOwUJrIiE0UCxJqSySFV2ykeOpg3VXuyEkaxcLEDWtcx8OT/MaDKKIw0NM9GsGe3NZL0Jz91ZkYL1eE69a8rkMUaidY2OA/0wk6rMK6H/agcgG3CnQZiynGMlAtxZ4iuFwG2ToWmpe8TyMkP7zHfptYNOI0rhjBmkLimxsR2bB8oIEutq/K1WwymfWrygWaNCMaDC22TiMEGTZTf6b7UBrjJApAGZ6faIx6ssbt47DQ6v6A5Rugryw7B4+IcCx/L4HCP5oFYqliXpviOW2jVDgE= mail@jstet.net
+
+final_message: "The system is ready, after $UPTIME seconds"
