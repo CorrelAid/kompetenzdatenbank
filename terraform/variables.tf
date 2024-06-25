@@ -1,7 +1,7 @@
 variable "project_name" {
   type        = string
   description = "Project name"
-  default     = "test"
+  default     = "kompetenzdatenbank"
 
 }
 
@@ -17,7 +17,7 @@ variable "server" {
   description = "Server configuration list"
   default = [
     {
-      name        = "test-dev"
+      name        = "kompetenzdatenbank-dev"
       server_type = "cpx11"
       image       = "ubuntu-22.04"
       location    = "fsn1-dc14"
@@ -25,7 +25,7 @@ variable "server" {
       user        = "deployer"
     },
     {
-      name        = "test-prod"
+      name        = "kompetenzdatenbank-prod"
       server_type = "ccx23"
       image       = "ubuntu-22.04"
       location    = "fsn1-dc14"
@@ -54,7 +54,7 @@ variable "dns" {
   default = [
     {
       zone      = "correlaid.org"
-      subdomain = "kompetenzdatenbank"
+      subdomain = "kompetenzdatenbank-dev"
     },
     {
       zone      = "correlaid.org"
