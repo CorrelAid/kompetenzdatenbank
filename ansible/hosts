@@ -1,4 +1,4 @@
 [servers]
-pink-VP-dev ansible_host=209.38.214.133 ansible_user=deployuser
-pink-VP-prod ansible_host=167.172.109.24 ansible_user=deployuser
+kompetenzdatenbank-dev ansible_host=162.55.163.35 ansible_user=deployer
+kompetenzdatenbank-prod ansible_host=5.75.247.215 ansible_user=deployer
 
