@@ -1,0 +1,810 @@
+{
+  "collection": "Teilnehmende",
+  "meta": {
+    "accountability": "all",
+    "archive_app_filter": true,
+    "archive_field": "status",
+    "archive_value": "archived",
+    "collapse": "open",
+    "collection": "Teilnehmende",
+    "color": null,
+    "display_template": null,
+    "group": null,
+    "hidden": false,
+    "icon": null,
+    "item_duplication_fields": null,
+    "note": null,
+    "preview_url": null,
+    "singleton": false,
+    "sort": null,
+    "sort_field": null,
+    "translations": null,
+    "unarchive_value": "draft",
+    "versioning": false
+  },
+  "schema": {
+    "name": "Teilnehmende"
+  },
+  "fields": [
+    {
+      "field": "Bild",
+      "type": "uuid",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": "image",
+        "display_options": {
+          "circle": true
+        },
+        "field": "Bild",
+        "group": null,
+        "hidden": false,
+        "interface": "file-image",
+        "note": "Upload a Square Image. 1000x1000 is recommended.",
+        "options": {
+          "crop": false,
+          "folder": "65b5005e-446e-45a7-af20-cedbd7575b3c"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": [
+          "file"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "Bild",
+        "table": "Teilnehmende",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "field": "Branchenkenntnisse",
+      "type": "json",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "format": false
+        },
+        "field": "Branchenkenntnisse",
+        "group": null,
+        "hidden": false,
+        "interface": "select-multiple-dropdown",
+        "note": null,
+        "options": {
+          "allowNone": true,
+          "allowOther": true,
+          "choices": [
+            {
+              "text": "Energie",
+              "value": "Energie"
+            }
+          ],
+          "previewThreshold": 10
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 12,
+        "special": [
+          "cast-json"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "Branchenkenntnisse",
+        "table": "Teilnehmende",
+        "data_type": "json",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "field": "Design",
+      "type": "json",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "format": false
+        },
+        "field": "Design",
+        "group": null,
+        "hidden": false,
+        "interface": "select-multiple-dropdown",
+        "note": null,
+        "options": {
+          "allowNone": true,
+          "allowOther": true,
+          "choices": [
+            {
+              "text": "Grafikdesign",
+              "value": "Grafikdesign"
+            }
+          ],
+          "previewThreshold": 10
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 10,
+        "special": [
+          "cast-json"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "Design",
+        "table": "Teilnehmende",
+        "data_type": "json",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "field": "Design_Thinking",
+      "type": "json",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "format": false
+        },
+        "field": "Design_Thinking",
+        "group": null,
+        "hidden": false,
+        "interface": "select-multiple-dropdown",
+        "note": null,
+        "options": {
+          "allowNone": true,
+          "allowOther": true,
+          "choices": [
+            {
+              "text": "Anwendung Design Thinking Methoden",
+              "value": "Anwendung Design Thinking Methoden"
+            }
+          ],
+          "previewThreshold": 10
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 11,
+        "special": [
+          "cast-json"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "Design_Thinking",
+        "table": "Teilnehmende",
+        "data_type": "json",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "field": "id",
+      "type": "integer",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "Teilnehmende",
+        "data_type": "integer",
+        "default_value": "nextval('\"Teilnehmende_id_seq\"'::regclass)",
+        "max_length": null,
+        "numeric_precision": 32,
+        "numeric_scale": 0,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": true,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "field": "Name",
+      "type": "string",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "Name",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": true,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "Name",
+        "table": "Teilnehmende",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "field": "Profession",
+      "type": "string",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "Profession",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown",
+        "note": null,
+        "options": {
+          "allowNone": true,
+          "allowOther": true,
+          "choices": [
+            {
+              "text": "Stundent:in",
+              "value": "Stundent:in"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": true,
+        "sort": 5,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "Profession",
+        "table": "Teilnehmende",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "field": "Programmiersprachen",
+      "type": "json",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "format": false
+        },
+        "field": "Programmiersprachen",
+        "group": null,
+        "hidden": false,
+        "interface": "select-multiple-dropdown",
+        "note": null,
+        "options": {
+          "allowNone": true,
+          "allowOther": true,
+          "choices": [
+            {
+              "text": "Python",
+              "value": "Python"
+            }
+          ],
+          "previewThreshold": 10
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": [
+          "cast-json"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "Programmiersprachen",
+        "table": "Teilnehmende",
+        "data_type": "json",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "field": "Projektmanagement",
+      "type": "json",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "format": false
+        },
+        "field": "Projektmanagement",
+        "group": null,
+        "hidden": false,
+        "interface": "select-multiple-dropdown",
+        "note": null,
+        "options": {
+          "allowNone": true,
+          "allowOther": true,
+          "choices": [
+            {
+              "text": "Agile Methoden",
+              "value": "Agile Methoden"
+            }
+          ],
+          "previewThreshold": 10
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 14,
+        "special": [
+          "cast-json"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "Projektmanagement",
+        "table": "Teilnehmende",
+        "data_type": "json",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "field": "status",
+      "type": "string",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "choices": [
+            {
+              "text": "$t:published",
+              "value": "published",
+              "color": "var(--theme--primary)",
+              "foreground": "var(--theme--primary)",
+              "background": "var(--theme--primary-background)"
+            },
+            {
+              "text": "$t:draft",
+              "value": "draft",
+              "color": "var(--theme--foreground)",
+              "foreground": "var(--theme--foreground)",
+              "background": "var(--theme--background-normal)"
+            },
+            {
+              "text": "$t:archived",
+              "value": "archived",
+              "color": "var(--theme--warning)",
+              "foreground": "var(--theme--warning)",
+              "background": "var(--theme--warning-background)"
+            }
+          ],
+          "showAsDot": true
+        },
+        "field": "status",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown",
+        "note": null,
+        "options": {
+          "choices": [
+            {
+              "text": "$t:published",
+              "value": "published",
+              "color": "var(--theme--primary)"
+            },
+            {
+              "text": "$t:draft",
+              "value": "draft",
+              "color": "var(--theme--foreground)"
+            },
+            {
+              "text": "$t:archived",
+              "value": "archived",
+              "color": "var(--theme--warning)"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "status",
+        "table": "Teilnehmende",
+        "data_type": "character varying",
+        "default_value": "draft",
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "field": "Teilnahmeart",
+      "type": "string",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "Teilnahmeart",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown",
+        "note": null,
+        "options": {
+          "allowNone": true,
+          "allowOther": true,
+          "choices": [
+            {
+              "text": "Teilnehmer:in",
+              "value": "Teilnehmer:in"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": true,
+        "sort": 6,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "Teilnahmeart",
+        "table": "Teilnehmende",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "field": "Visualisierung_und_Storytelling",
+      "type": "json",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "format": false
+        },
+        "field": "Visualisierung_und_Storytelling",
+        "group": null,
+        "hidden": false,
+        "interface": "select-multiple-dropdown",
+        "note": null,
+        "options": {
+          "allowNone": true,
+          "allowOther": true,
+          "choices": [
+            {
+              "text": "Komplexe Ideen visualisieren",
+              "value": "Komplexe Ideen visualisieren"
+            }
+          ],
+          "previewThreshold": 10
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 13,
+        "special": [
+          "cast-json"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "Visualisierung_und_Storytelling",
+        "table": "Teilnehmende",
+        "data_type": "json",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "field": "Web_Technologien",
+      "type": "json",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "format": false
+        },
+        "field": "Web_Technologien",
+        "group": null,
+        "hidden": false,
+        "interface": "select-multiple-dropdown",
+        "note": null,
+        "options": {
+          "allowNone": true,
+          "allowOther": true,
+          "choices": [
+            {
+              "text": "HTML/CSS",
+              "value": "HTML/CSS"
+            }
+          ],
+          "previewThreshold": 10
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 8,
+        "special": [
+          "cast-json"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "Web_Technologien",
+        "table": "Teilnehmende",
+        "data_type": "json",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "field": "Weitere_Technologien",
+      "type": "json",
+      "meta": {
+        "collection": "Teilnehmende",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "format": false
+        },
+        "field": "Weitere_Technologien",
+        "group": null,
+        "hidden": false,
+        "interface": "select-multiple-dropdown",
+        "note": null,
+        "options": {
+          "allowNone": true,
+          "allowOther": true,
+          "choices": [
+            {
+              "text": "Datenanalyse",
+              "value": "Datenanalyse"
+            }
+          ],
+          "previewThreshold": 10
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 9,
+        "special": [
+          "cast-json"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "Weitere_Technologien",
+        "table": "Teilnehmende",
+        "data_type": "json",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "field": "Bild",
+      "related_collection": "directus_files",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "Teilnehmende",
+        "many_field": "Bild",
+        "one_allowed_collections": null,
+        "one_collection": "directus_files",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "Teilnehmende",
+        "column": "Bild",
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id",
+        "constraint_name": "teilnehmende_bild_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    }
+  ]
+}

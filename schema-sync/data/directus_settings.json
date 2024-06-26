@@ -1,1 +1,63 @@
-[]
+[
+  {
+    "auth_login_attempts": 25,
+    "auth_password_policy": null,
+    "basemaps": null,
+    "custom_aspect_ratios": null,
+    "custom_css": null,
+    "default_appearance": "auto",
+    "default_language": "en-US",
+    "default_theme_dark": null,
+    "default_theme_light": null,
+    "id": 1,
+    "mapbox_key": null,
+    "module_bar": [
+      {
+        "enabled": true,
+        "id": "content",
+        "type": "module"
+      },
+      {
+        "enabled": true,
+        "id": "users",
+        "type": "module"
+      },
+      {
+        "enabled": false,
+        "id": "files",
+        "type": "module"
+      },
+      {
+        "enabled": true,
+        "id": "insights",
+        "type": "module"
+      },
+      {
+        "enabled": true,
+        "id": "settings",
+        "locked": true,
+        "type": "module"
+      }
+    ],
+    "project_color": "#A2936C",
+    "project_descriptor": null,
+    "project_logo": "4f177db9-bd42-463b-b39a-77798cf191bb",
+    "project_name": "Directus",
+    "public_background": "deb97187-77ae-41ff-8ad6-7a90bc95a237",
+    "public_favicon": null,
+    "public_foreground": "2b365062-cf9d-4e91-ad48-50f568ed50d3",
+    "public_note": null,
+    "public_registration": false,
+    "public_registration_email_filter": null,
+    "public_registration_role": null,
+    "public_registration_verify_email": true,
+    "report_bug_url": null,
+    "report_error_url": null,
+    "report_feature_url": null,
+    "storage_asset_presets": null,
+    "storage_asset_transform": "all",
+    "storage_default_folder": null,
+    "theme_dark_overrides": null,
+    "theme_light_overrides": null
+  }
+]

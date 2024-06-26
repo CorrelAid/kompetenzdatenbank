@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "color": null,
+    "dashboard": "07d4d4db-7a76-4c92-a4e8-649edf29db24",
+    "date_created": "2024-06-26T01:07:41.983Z",
+    "height": 41,
+    "icon": null,
+    "id": "0b6c5b1d-2821-41a6-9038-921c6182a21e",
+    "name": null,
+    "note": null,
+    "options": {
+      "collection": "Teilnehmende",
+      "color": "#2EC27E",
+      "column": "Profession",
+      "conditionalFill": null,
+      "donut": true,
+      "legend": "bottom",
+      "showLabels": true
+    },
+    "position_x": 1,
+    "position_y": 1,
+    "show_header": false,
+    "type": "pie-chart",
+    "width": 44
+  }
+]

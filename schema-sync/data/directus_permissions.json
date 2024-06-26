@@ -1,1 +1,227 @@
-[]
+[
+  {
+    "action": "read",
+    "collection": "directus_dashboards",
+    "fields": [
+      "*"
+    ],
+    "permissions": {},
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "read",
+    "collection": "directus_files",
+    "fields": [
+      "*"
+    ],
+    "permissions": {},
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "read",
+    "collection": "directus_flows",
+    "fields": [
+      "id",
+      "status",
+      "name",
+      "icon",
+      "color",
+      "options",
+      "trigger"
+    ],
+    "permissions": {
+      "trigger": {
+        "_eq": "manual"
+      }
+    },
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "read",
+    "collection": "directus_folders",
+    "fields": [
+      "*"
+    ],
+    "permissions": {},
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "create",
+    "collection": "directus_panels",
+    "fields": [
+      "*"
+    ],
+    "permissions": {},
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "delete",
+    "collection": "directus_panels",
+    "fields": [
+      "*"
+    ],
+    "permissions": {},
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "read",
+    "collection": "directus_panels",
+    "fields": [
+      "*"
+    ],
+    "permissions": {},
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "update",
+    "collection": "directus_panels",
+    "fields": [
+      "*"
+    ],
+    "permissions": {},
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "read",
+    "collection": "directus_roles",
+    "fields": [
+      "*"
+    ],
+    "permissions": {},
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "create",
+    "collection": "directus_shares",
+    "fields": [
+      "*"
+    ],
+    "permissions": {},
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "delete",
+    "collection": "directus_shares",
+    "fields": [
+      "*"
+    ],
+    "permissions": {
+      "user_created": {
+        "_eq": "$CURRENT_USER"
+      }
+    },
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "read",
+    "collection": "directus_shares",
+    "fields": [
+      "*"
+    ],
+    "permissions": {
+      "_or": [
+        {
+          "role": {
+            "_eq": "$CURRENT_ROLE"
+          }
+        },
+        {
+          "role": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "update",
+    "collection": "directus_shares",
+    "fields": [
+      "*"
+    ],
+    "permissions": {
+      "user_created": {
+        "_eq": "$CURRENT_USER"
+      }
+    },
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "read",
+    "collection": "directus_users",
+    "fields": [
+      "*"
+    ],
+    "permissions": {},
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "update",
+    "collection": "directus_users",
+    "fields": [
+      "first_name",
+      "last_name",
+      "email",
+      "password",
+      "location",
+      "title",
+      "description",
+      "avatar",
+      "language",
+      "appearance",
+      "theme_light",
+      "theme_dark",
+      "theme_light_overrides",
+      "theme_dark_overrides",
+      "tfa_secret"
+    ],
+    "permissions": {
+      "id": {
+        "_eq": "$CURRENT_USER"
+      }
+    },
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": null
+  },
+  {
+    "action": "read",
+    "collection": "Teilnehmende",
+    "fields": [
+      "*"
+    ],
+    "permissions": {},
+    "presets": null,
+    "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "validation": {}
+  }
+]

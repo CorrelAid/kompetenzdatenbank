@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "admin_access": false,
+    "app_access": true,
+    "description": null,
+    "enforce_tfa": false,
+    "icon": "supervised_user_circle",
+    "id": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
+    "ip_access": null,
+    "name": "Viewer"
+  }
+]

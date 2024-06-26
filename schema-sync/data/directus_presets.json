@@ -1,1 +1,280 @@
-[]
+[
+  {
+    "bookmark": null,
+    "collection": "Teilnehmende",
+    "color": null,
+    "filter": null,
+    "icon": "format_list_numbered",
+    "layout": "cards",
+    "layout_options": {
+      "cards": {
+        "imageFit": "crop",
+        "subtitle": "{{Profession}}",
+        "title": "{{Name}}"
+      }
+    },
+    "layout_query": {
+      "cards": {
+        "page": 1
+      }
+    },
+    "refresh_interval": null,
+    "role": null,
+    "search": null,
+    "user": null
+  },
+  {
+    "bookmark": "Image Check",
+    "collection": "Teilnehmende",
+    "color": null,
+    "filter": null,
+    "icon": "stay_primary_landscape",
+    "layout": "tabular",
+    "layout_options": {
+      "tabular": {
+        "spacing": "compact",
+        "widths": {}
+      }
+    },
+    "layout_query": {
+      "tabular": {
+        "fields": [
+          "status",
+          "Bild",
+          "Name",
+          "Profession"
+        ],
+        "page": 1
+      }
+    },
+    "refresh_interval": null,
+    "role": "68730cc0-5018-4325-8225-52c4bceb1f0d",
+    "search": null,
+    "user": null
+  },
+  {
+    "bookmark": "Mentor:innen",
+    "collection": "Teilnehmende",
+    "color": null,
+    "filter": {
+      "_and": [
+        {
+          "Teilnahmeart": {
+            "_contains": "Mentor:in"
+          }
+        }
+      ]
+    },
+    "icon": "school",
+    "layout": "cards",
+    "layout_options": {
+      "cards": {
+        "icon": "account_box",
+        "imageFit": "crop",
+        "subtitle": "{{Profession}}",
+        "title": "{{Name}}"
+      },
+      "tabular": {
+        "widths": {}
+      }
+    },
+    "layout_query": {
+      "tabular": {
+        "fields": [
+          "Name",
+          "Profession"
+        ],
+        "page": 1
+      }
+    },
+    "refresh_interval": null,
+    "role": null,
+    "search": null,
+    "user": null
+  },
+  {
+    "bookmark": "Technische Kompetenzen",
+    "collection": "Teilnehmende",
+    "color": null,
+    "filter": {
+      "_and": [
+        {
+          "Teilnahmeart": {
+            "_nin": [
+              "Organisator:in",
+              "Helfer:in"
+            ]
+          }
+        },
+        {
+          "_or": [
+            {
+              "Programmiersprachen": {
+                "_nnull": true
+              }
+            },
+            {
+              "Web_Technologien": {
+                "_nnull": true
+              }
+            },
+            {
+              "Weitere_Technologien": {
+                "_nnull": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "icon": "code",
+    "layout": "tabular",
+    "layout_options": {
+      "tabular": {
+        "spacing": "cozy",
+        "widths": {
+          "Name": 211,
+          "Profession": 138,
+          "Programmiersprachen": 293,
+          "Web_Technologien": 641,
+          "Weitere_Technologien": 577
+        }
+      }
+    },
+    "layout_query": {
+      "tabular": {
+        "fields": [
+          "Name",
+          "Profession",
+          "Programmiersprachen",
+          "Web_Technologien",
+          "Weitere_Technologien"
+        ],
+        "page": 1
+      }
+    },
+    "refresh_interval": null,
+    "role": null,
+    "search": null,
+    "user": null
+  },
+  {
+    "bookmark": "Gestalterische Kompetenzen",
+    "collection": "Teilnehmende",
+    "color": null,
+    "filter": {
+      "_and": [
+        {
+          "Teilnahmeart": {
+            "_in": [
+              "Teilnehmer:in",
+              "Mentor:in"
+            ]
+          }
+        },
+        {
+          "_or": [
+            {
+              "count(Visualisierung_und_Storytelling)": {
+                "_gt": "0"
+              }
+            },
+            {
+              "count(Design)": {
+                "_gt": "0"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "icon": "format_paint",
+    "layout": "tabular",
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "Design": 502,
+          "Visualisierung_und_Storytelling": 970
+        }
+      }
+    },
+    "layout_query": {
+      "tabular": {
+        "fields": [
+          "Name",
+          "Profession",
+          "Design",
+          "Visualisierung_und_Storytelling"
+        ],
+        "page": 1
+      }
+    },
+    "refresh_interval": null,
+    "role": null,
+    "search": null,
+    "user": null
+  },
+  {
+    "bookmark": "Sonstige Kompetenzen",
+    "collection": "Teilnehmende",
+    "color": null,
+    "filter": {
+      "_and": [
+        {
+          "Teilnahmeart": {
+            "_in": [
+              "Teilnehmer:in",
+              "Mentor:in"
+            ]
+          }
+        },
+        {
+          "_or": [
+            {
+              "Design_Thinking": {
+                "_nnull": true
+              }
+            },
+            {
+              "Branchenkenntnisse": {
+                "_nnull": true
+              }
+            },
+            {
+              "Projektmanagement": {
+                "_nnull": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "icon": "sprint",
+    "layout": "tabular",
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "Branchenkenntnisse": 454,
+          "Design_Thinking": 547,
+          "Projektmanagement": 485
+        }
+      }
+    },
+    "layout_query": {
+      "tabular": {
+        "fields": [
+          "Name",
+          "Profession",
+          "Design_Thinking",
+          "Branchenkenntnisse",
+          "Projektmanagement"
+        ],
+        "page": 1
+      }
+    },
+    "refresh_interval": null,
+    "role": null,
+    "search": null,
+    "user": null
+  }
+]
