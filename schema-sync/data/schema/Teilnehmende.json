@@ -92,6 +92,12 @@
         "options": {
           "allowNone": true,
           "allowOther": true,
+          "choices": [
+            {
+              "text": "E-Commerce",
+              "value": "E-Commerce"
+            }
+          ],
           "previewThreshold": 20
         },
         "readonly": false,
@@ -141,6 +147,12 @@
         "options": {
           "allowNone": true,
           "allowOther": true,
+          "choices": [
+            {
+              "text": "UI/UX Design",
+              "value": "UI/UX Design"
+            }
+          ],
           "previewThreshold": 20
         },
         "readonly": false,
@@ -190,6 +202,12 @@
         "options": {
           "allowNone": true,
           "allowOther": true,
+          "choices": [
+            {
+              "text": "Anwendung Design Thinking Methoden",
+              "value": "Anwendung Design Thinking Methoden"
+            }
+          ],
           "previewThreshold": 20
         },
         "readonly": false,
@@ -371,6 +389,12 @@
         "options": {
           "allowNone": true,
           "allowOther": true,
+          "choices": [
+            {
+              "text": "Python",
+              "value": "Python"
+            }
+          ],
           "previewThreshold": 20
         },
         "readonly": false,
@@ -420,6 +444,12 @@
         "options": {
           "allowNone": true,
           "allowOther": true,
+          "choices": [
+            {
+              "text": "Projektorganisation",
+              "value": "Projektorganisation"
+            }
+          ],
           "previewThreshold": 20
         },
         "readonly": false,
@@ -603,6 +633,12 @@
         "options": {
           "allowNone": true,
           "allowOther": true,
+          "choices": [
+            {
+              "text": "Komplexe Ideen visualisieren",
+              "value": "Komplexe Ideen visualisieren"
+            }
+          ],
           "previewThreshold": 20
         },
         "readonly": false,
@@ -652,6 +688,12 @@
         "options": {
           "allowNone": true,
           "allowOther": true,
+          "choices": [
+            {
+              "text": "Backend-Entwicklung",
+              "value": "Backend-Entwicklung"
+            }
+          ],
           "previewThreshold": 20
         },
         "readonly": false,
@@ -701,6 +743,12 @@
         "options": {
           "allowNone": true,
           "allowOther": true,
+          "choices": [
+            {
+              "text": "Datenvisualisierung",
+              "value": "Datenvisualisierung"
+            }
+          ],
           "previewThreshold": 20
         },
         "readonly": false,
