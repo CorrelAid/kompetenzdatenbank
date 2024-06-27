@@ -18,7 +18,7 @@
         "type": "module"
       },
       {
-        "enabled": true,
+        "enabled": false,
         "id": "users",
         "type": "module"
       },
@@ -40,7 +40,7 @@
       }
     ],
     "project_color": "#A2936C",
-    "project_descriptor": null,
+    "project_descriptor": "Kompetenzdatenbank",
     "project_logo": "4f177db9-bd42-463b-b39a-77798cf191bb",
     "project_name": "Directus",
     "public_background": "deb97187-77ae-41ff-8ad6-7a90bc95a237",

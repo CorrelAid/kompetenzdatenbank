@@ -175,13 +175,13 @@
         {
           "_or": [
             {
-              "count(Visualisierung_und_Storytelling)": {
-                "_gt": "0"
+              "Visualisierung_und_Storytelling": {
+                "_nnull": true
               }
             },
             {
-              "count(Design)": {
-                "_gt": "0"
+              "Design": {
+                "_nnull": true
               }
             }
           ]
