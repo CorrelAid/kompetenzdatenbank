@@ -25,6 +25,13 @@ export const syncDirectusCollections = {
 			sort: ['parent', 'id'],
 		},
 	},
+	directus_files: {
+		watch: ['files'],
+		excludeFields: ["modified_by", "uploaded_by"],
+		query: {
+			filter: { folder: { id: { _eq: "d169b6d9-9e72-4adc-aaca-548fa22aeab5" } } },
+		},
+	},
 	directus_permissions: {
 		watch: ['permissions', 'collections', 'fields'],
 		excludeFields: ['id'],
@@ -55,7 +62,7 @@ export const syncDirectusCollections = {
 		getKey: (o) => `${o.role ?? 'all'}-${o.collection}-${o.bookmark || 'default'}`,
 		query: {
 			filter: {
-				user: { _null: true}
+				user: { _null: true }
 			}
 		}
 	},
@@ -79,8 +86,8 @@ export const syncDirectusCollections = {
 	directus_webhooks: {
 		watch: ['webhooks'],
 		excludeFields: ['url'],
-	}, 
-	
+	},
+
 	// These are already exported via schema, so you might not need them
 	/*directus_collections: {
 		watch: ['relations'],
@@ -105,3 +112,7 @@ export const syncDirectusCollections = {
 		},
 	},*/
 };
+
+
+
+

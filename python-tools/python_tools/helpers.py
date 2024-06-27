@@ -1,9 +1,8 @@
 import json
 import requests
-from datetime import datetime
 from python_tools.io import get_yaml_var, get_encrypted_var
 from python_tools.directus_auth import Directus
-from python_tools.models.main import Lumpinbreast, Scan, Screening
+
 
 
 vault_password_file_path = "../ansible/.vault_pw"
@@ -15,8 +14,17 @@ def dev_admin_mail():
 def dev_admin_pw():
     return get_encrypted_var("directus_admin_pw", vault_password_file_path, vault_file_path)[0]
 
+def prod_admin_pw():
+    return get_encrypted_var("directus_admin_pw", vault_password_file_path, vault_file_path)[1]
+
+def prod_admin_mail():
+    return get_encrypted_var("directus_admin_mail", vault_password_file_path, vault_file_path)[1]
+
 def dev_base_url():
     return f'https://{get_yaml_var("subdomain", "../ansible/group_vars/group_vars.yml")[0]}'
+
+def prod_base_url():
+    return f"https://{get_yaml_var('subdomain', '../ansible/group_vars/group_vars.yml')[1]}"
 
 def dev_mail():
     return get_encrypted_var("smtp_user", vault_password_file_path, vault_file_path)[0]
@@ -47,6 +55,11 @@ def admin_role_id():
         
 def dev_admin_access_token():
     directus = Directus(dev_admin_mail(), dev_admin_pw(), dev_base_url())
+    access_token = directus.get_access_token()
+    return access_token
+
+def prod_admin_access_token():
+    directus = Directus(prod_admin_mail(), prod_admin_pw(), prod_base_url())
     access_token = directus.get_access_token()
     return access_token
 

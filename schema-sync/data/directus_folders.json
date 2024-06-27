@@ -3,5 +3,10 @@
     "id": "65b5005e-446e-45a7-af20-cedbd7575b3c",
     "name": "Teilnehmende",
     "parent": null
+  },
+  {
+    "id": "d169b6d9-9e72-4adc-aaca-548fa22aeab5",
+    "name": "Styling",
+    "parent": null
   }
 ]

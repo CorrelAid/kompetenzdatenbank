@@ -8,5 +8,15 @@
     "id": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
     "ip_access": null,
     "name": "Viewer"
+  },
+  {
+    "admin_access": true,
+    "app_access": true,
+    "description": null,
+    "enforce_tfa": false,
+    "icon": "supervised_user_circle",
+    "id": "4fb55b5e-f9e7-4f26-b8d3-fd1a00a1ee79",
+    "ip_access": null,
+    "name": "Helfer:innen"
   }
 ]

@@ -9,10 +9,12 @@ def get_yaml_var(var,file_path):
     return var
 
 def get_encrypted_var(var, vault_password_file_path, vault_file_path, index=None):
-    with open(vault_password_file_path, 'r') as stream:
-        vault_password = stream.read()
-    vault = Vault(password=vault_password)
-    vault_data = vault.load(open(vault_file_path, 'r').read())
+    with open(vault_password_file_path, 'r') as password_file:
+        vault_password = password_file.read().strip()
+        
+    with open(vault_file_path, 'r') as vault_file:
+        vault = Vault(password=vault_password)
+        vault_data = vault.load(vault_file.read())
     var = vault_data[var]
     if index is not None:
         var = var[index]

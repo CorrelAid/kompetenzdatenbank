@@ -8,7 +8,7 @@
     "default_appearance": "auto",
     "default_language": "en-US",
     "default_theme_dark": null,
-    "default_theme_light": null,
+    "default_theme_light": "Directus Default",
     "id": 1,
     "mapbox_key": null,
     "module_bar": [
@@ -23,7 +23,7 @@
         "type": "module"
       },
       {
-        "enabled": false,
+        "enabled": true,
         "id": "files",
         "type": "module"
       },
