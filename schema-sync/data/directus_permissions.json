@@ -219,7 +219,15 @@
     "fields": [
       "*"
     ],
-    "permissions": {},
+    "permissions": {
+      "_and": [
+        {
+          "status": {
+            "_eq": "published"
+          }
+        }
+      ]
+    },
     "presets": null,
     "role": "40ddb6ee-3590-48ae-ab25-f06ffbab35f9",
     "validation": {}
